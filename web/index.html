@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8"/>
+    <title>Sanwar Jayswal</title>
+    <meta name="description"
+          content="Hello there, I'm Sanwar Jayswal. This is my personal website, which contains public information that anyone can find on the internet."/>
+    <link rel="manifest" href="manifest.json"/>
+
+    <!-- Google site verification -->
+    <meta name="google-site-verification" content="76wUqX7ccqcnCTDBXwjdPxvMFBzYm3G5Ep5DCihIMRs" />
+
+    <!-- Browser meta tags & icons -->
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="apple-mobile-web-app-title" content="Sanwar Jayswal"/>
+    <link rel="apple-touch-icon" href="icons/sanwarPng.png"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icons/sanwarIcon_32.ico" sizes="any"/>
+
+    <script>
+      // The value below is injected by flutter build, do not touch.
+      var serviceWorkerVersion = null;
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer=""></script>
+    <link rel="stylesheet" type="text/css" href="splash/style.css"/>
+    <script src="splash/splash.js"></script>
+</head>
+
+<body>
+  <div id="splash" class="center">
+    <h1 class="loading-title">Sanwar Jayswal</h1>
+    <p class="loading-tagline">Computing Student | Developer</p>
+    <p class="loading-text">Loading<span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span></p>
+  </div>
+<script>
+      window.addEventListener("load", function (ev) {
+        // Download main.dart.js
+        _flutter.loader.loadEntrypoint({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: function (engineInitializer) {
+            engineInitializer.initializeEngine().then(function (appRunner) {
+              appRunner.runApp();
+            });
+          },
+        });
+      });
+</script>
+<script type="module">
+  import { config } from "./env.js";
+
+  // Initialize Firebase
+  const firebaseConfig = {
+    apiKey: config.FIREBASE_API_KEY,
+    authDomain: config.FIREBASE_AUTH_DOMAIN,
+    projectId: config.FIREBASE_PROJECT_ID,
+    storageBucket: config.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: config.FIREBASE_MESSAGING_SENDER_ID,
+    appId: config.FIREBASE_APP_ID,
+    measurementId: config.FIREBASE_MEASUREMENT_ID
+  };
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+
+</html>
