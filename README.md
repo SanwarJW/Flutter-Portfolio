@@ -1,3 +1,5 @@
+<img width="1011" alt="Screenshot 2024-09-06 at 2 54 34 PM" src="https://github.com/user-attachments/assets/5e7f5a3e-5066-46ed-ab1a-172b30c65b43">
+
 # Sanwar Jayswal's Portfolio
 
 Welcome to my portfolio! I'm Sanwar Jayswal, a passionate software developer with a focus on mobile application development using Swift, SwiftUI, and Flutter. This portfolio showcases my projects and highlights my skills and experience.
